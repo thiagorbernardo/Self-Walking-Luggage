@@ -1,0 +1,8 @@
+sequenceDiagram
+User->>App: Types email and password
+loop Validate Email
+    App->>App: Validate if email is valid
+end
+App->>Backend: Login user
+Backend->>App: Returns Auth Token
+App->>User: Redirect to home screen
